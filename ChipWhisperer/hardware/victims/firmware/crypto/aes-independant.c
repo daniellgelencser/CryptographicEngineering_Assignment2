@@ -302,7 +302,7 @@ uint8_t mask_modes;
 
 void aes_indep_init(void)
 {
-  local_memset(&aes_ctx, 0, sizeof(aes_ctx));
+  memset(&aes_ctx, 0, sizeof(aes_ctx));
   mask_modes = 0;
 }
 

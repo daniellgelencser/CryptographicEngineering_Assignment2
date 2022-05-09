@@ -39,7 +39,7 @@ ifeq ($(implementation),ANSSI)
       CDEFS += -DTRIG_BEFORE_KS
     endif
 
-  else ifeq ($(HAL),avr)
+  else ifeq ($(HAL),$(filter $(HAL), avr xmega))
     CDEFS += -DANSSI_AVR
     CRYPTO_LIB = secAES-ATmega8515/src
     ASRC += maskedAES128enc.S
